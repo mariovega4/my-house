@@ -14,8 +14,8 @@ public class Picture
     private Square wall;
     private Square window;
     private Triangle roof;
-    private Circle sun;
-
+    private Circle moon;
+    
     /**
      * Constructor for objects of class Picture
      */
@@ -29,31 +29,38 @@ public class Picture
      */
     public void draw()
     {
-        wall = new Square();
-        wall.moveHorizontal(-140);
-        wall.moveVertical(20);
-        wall.changeSize(120);
-        wall.makeVisible();
+    wall = new Square();
+    wall.moveHorizontal(-140);
+    wall.moveVertical(20);
+    wall.changeSize(120);
+    wall.makeVisible();
         
-        window = new Square();
-        window.changeColor("black");
-        window.moveHorizontal(-120);
-        window.moveVertical(40);
-        window.changeSize(40);
-        window.makeVisible();
+    window = new Square();
+    window.changeColor("black");
+    window.moveHorizontal(-120);
+    window.moveVertical(40);
+    window.changeSize(40);
+    window.makeVisible();
 
-        roof = new Triangle();  
-        roof.changeSize(60, 180);
-        roof.moveHorizontal(20);
-        roof.moveVertical(-60);
-        roof.makeVisible();
+    roof = new Triangle();  
+    roof.changeSize(60, 180);
+    roof.moveHorizontal(20);
+    roof.moveVertical(-60);
+    roof.makeVisible();
 
-        sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
-        sun.changeSize(80);
-        sun.makeVisible();
+    moon = new Circle();
+    moon.changeColor("yellow");
+    moon.moveHorizontal(100);
+    moon.moveVertical(-40);
+    moon.changeSize(80);
+    moon.makeVisible();
+        
+        
+    moon = new Circle();
+    moon.makeVisible();
+    moon.moveHorizontal(-130);
+    moon.changeColor("magenta");
+    moon.changeSize(40);
     }
 
     /**
@@ -66,7 +73,7 @@ public class Picture
             wall.changeColor("black");
             window.changeColor("white");
             roof.changeColor("black");
-            sun.changeColor("black");
+            moon.changeColor("black");
         }
     }
 
@@ -80,7 +87,7 @@ public class Picture
             wall.changeColor("red");
             window.changeColor("black");
             roof.changeColor("green");
-            sun.changeColor("yellow");
+            moon.changeColor("yellow");
         }
     }
 }
