@@ -29,6 +29,7 @@ public class Picture
      * Draw this picture.
      */
     public void draw()
+    
     {
     grass = new Square();
     grass.moveVertical(125);
@@ -71,7 +72,10 @@ public class Picture
     moon.makeVisible();
     moon.moveHorizontal(-150);
     
+
     
+    sun.slowMoveVertical(-250);
+    moon.makeInvisible();
     }
 
     /**
